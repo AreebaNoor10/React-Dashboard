@@ -75,7 +75,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function Sidebar() {
   const theme = useTheme();
   // const [open, setOpen] = React.useState(true);
-  const navigate = useNavigate();
   const open = useAppstore((state)=>state.dopen);
   return (
     <Box sx={{ display: 'flex' }}>
@@ -89,7 +88,7 @@ export default function Sidebar() {
         </DrawerHeader>
         <Divider />
         <List>
-        <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate('/')}}>
+        <ListItem  disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -105,7 +104,7 @@ export default function Sidebar() {
                   }}
                 >
                   <GridViewOutlinedIcon style={{color:'#fff'}}/>
-                </ListItemIcon>Dashboard</ListItemButton>
+                </ListItemIcon><a href="/">Dashboard</a></ListItemButton>
                 {/* <ListItemText primary='Dashboard' sx={{ opacity: open ? 1 : 0,color:'#5d60ef' }} /> */}
               </ListItemButton>
             </ListItem>
@@ -127,7 +126,7 @@ export default function Sidebar() {
                 >
                   <LeaderboardIcon/>
                 </ListItemIcon>
-                <ListItemText primary='LeaderBoard' sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemText  sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
             <ListItem  disablePadding sx={{ display: 'block' }}>
@@ -147,7 +146,17 @@ export default function Sidebar() {
                 >
                   <ShoppingCartIcon/>
                 </ListItemIcon>
-                <ListItemText primary='Orders' sx={{ opacity: open ? 1 : 0 }} />
+                <ListItemButton alignItems='center' sx={{opacity: open ? 1 : 0,bgcolor:'#5d60ef',borderRadius:'10px', color:'#fff'}}> <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                    textDecoration:'none'
+                  }}
+                >
+                  <GridViewOutlinedIcon style={{color:'#fff'}}/>
+                </ListItemIcon><a href="/about">About</a></ListItemButton>
+                {/* <ListItemText primary='Dashboard' sx={{ opacity: open ? 1 : 0,color:'#5d60ef' }} /> */}
               </ListItemButton>
             </ListItem>
             <ListItem  disablePadding sx={{ display: 'block' }}>
