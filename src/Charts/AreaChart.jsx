@@ -17,7 +17,7 @@ export default function AreaChart() {
       ]}
       width={800}
       height={400}
-      sx={{mb:25,mr:60, align:'center'}}
+      sx={{mb:25,mr:60,"@media (max-width:600px)": {}}}
     />
   );
 }

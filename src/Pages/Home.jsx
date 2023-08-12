@@ -30,17 +30,17 @@ const Home = () => {
     <Sidebar/>
     <Box component="main" sx={{ flexGrow: 1,p:2,"@media (max-width:600px)": {p:0}}}>
     <Grid container direction='row' spacing={2} alignContent='center'>
-      <Grid item xs={12} sm={8}>
-        <Card sx={{borderRadius:'10px', height:'100%', "@media (max-width:600px)": {width:'50%'}}}>
+      <Grid item xs={7} sm={8}>
+        <Card sx={{borderRadius:'10px', height:'100%', "@media (max-width:600px)": {width:'80%'}}}>
       <CardContent>
-        <Typography gutterBottom variant="h6" component="div"  color='#23395d' fontWeight='bold' paddingLeft={1}>
+        <Typography gutterBottom variant="h6" component="div"  color='#23395d' fontWeight='bold' paddingLeft={1} sx={{ "@media (max-width:600px)": {paddingRight:8,textAlign:'center'}}}>
           Today's Sale
         </Typography>
-        <Typography variant="body2" color="text.secondary" paddingLeft={1}>
+        <Typography variant="body2" color="text.secondary" paddingLeft={1} sx={{ "@media (max-width:600px)": {paddingRight:8,textAlign:'center',}}}>
           Sales Summary
         </Typography>
       </CardContent>
-      <Grid container spacing={1} direction={'row'} paddingLeft={2} paddingRight={2}>
+      <Grid container spacing={1} direction={'row'} paddingLeft={2} paddingRight={2}sx={{ "@media (max-width:600px)": {justifyContent:'center', paddingLeft:0,paddingRight:8, paddingBottom:2}}}>
         <Grid item xs={8} sm={3}>
       <Card sx={{ bgcolor:"#FFB6C1", borderRadius:'10px'}}>
       <CardContent>
@@ -116,10 +116,10 @@ const Home = () => {
     </Grid>
     </Card>
 </Grid>
-      <Grid item xs={12} sm={4}>
-      <Card sx={{width:'100%',"@media (max-width:600px)": {width:'60%'}}}>
+      <Grid item xs={8} sm={4}>
+      <Card sx={{width:'100%',"@media (max-width:600px)": {width:'80%', height:'40vh'}}}>
       <CardContent>
-       <Typography variant='h6' color='#23395d' fontWeight='bold' ml={5} >Visitor   Insights</Typography>
+       <Typography variant='h6' color='#23395d' fontWeight='bold' ml={5}  >Visitor   Insights</Typography>
        <LineChart1/>
       </CardContent>
     </Card>
@@ -128,40 +128,23 @@ const Home = () => {
     <Box height={10} />
     <Grid container direction='row' spacing={2}>
        <Grid item xs={12} sm={5} >
-       <Card sx={{maxWidth:'100%', height:'50vh',"@media (max-width:600px)": {width:'60%',height:'40vh'}}}>
+       <Card sx={{maxWidth:'100%',height:'50vh',"@media (max-width:600px)": {width:'60%',height:'40vh'},"@media (max-width:400px)": {width:'45%'}}}>
       <CardContent>
        <Typography variant='h6' color='#23395d' fontWeight='bold'>Total Revenue</Typography>
-       {/* <Chart
-              options={state.options}
-              series={state.series}
-              type="bar"
-              height="100%"
-              width="80%"
-              align="center"
-            /> */}
             <MUIBarchar align='center' />
       </CardContent>
     </Card>
        </Grid>
-       <Grid item xs={12} sm={3.5} >
-       <Card sx={{maxWidth:'100%',height:'50vh',"@media (max-width:600px)": {width:'60%',height:'40vh'}}}>
+       <Grid item xs={8} sm={3.5} >
+       <Card sx={{maxWidth:'100%',height:'50vh',"@media (max-width:600px)": {width:'70%',height:'40vh'}}}>
       <CardContent>
        <Typography variant='h6' color='#23395d' fontWeight='bold' mt={2}>Customer Satisfaction</Typography>
-       {/* <div className='chart'>
-       <Chart
-              options={state.options}
-              series={state.series}
-              type="area"
-              width="300"
-              align="center"
-            />
-            </div> */}
             <AreaChart/>
       </CardContent>
     </Card>
        </Grid>
-       <Grid item xs={12} sm={3.5} >
-       <Card sx={{maxWidth:'100%',height:'50vh',"@media (max-width:600px)": {width:'60%',height:'40vh'}}}>
+       <Grid item xs={8} sm={3.5} >
+       <Card sx={{maxWidth:'100%',height:'50vh',"@media (max-width:600px)": {width:'70%',height:'50vh'}}}>
       <CardContent>
        <Typography variant='h6' color='#23395d' fontWeight='bold' mt={2}>Target vs Reality</Typography>
        <div className='chart'>
@@ -173,24 +156,24 @@ const Home = () => {
     </Grid>
     <Box height={10} />
     <Grid container direction='row' spacing={2}>
-       <Grid item xs={12} sm={5} >
-       <Card sx={{maxWidth:'100%',height:'100%',"@media (max-width:600px)": {width:'45%',height:'50vh'}}}>
+       <Grid item xs={7} sm={5} >
+       <Card sx={{maxWidth:'100%',height:'100%',"@media (max-width:600px)": {width:'80%',height:'60vh'},"@media (max-width:400px)": {width:'75%'}}}>
       <CardContent>
        <Typography variant='h6' color='#23395d' fontWeight='bold'>Visitor   Insights</Typography>
       <Table1/>
       </CardContent>
     </Card>
        </Grid>
-       <Grid item xs={12} sm={3.5} >
-       <Card sx={{maxWidth:'100%',height:'100%',"@media (max-width:600px)": {width:'60%',height:'40vh'}}}>
+       <Grid item xs={7} sm={3.5} >
+       <Card sx={{maxWidth:'100%',height:'100%',"@media (max-width:600px)": {width:'80%',height:'40vh'},}}>
       <CardContent>
        <Typography variant='h6' color='#23395d' fontWeight='bold'>Sales Mapping By Country</Typography>
      <GeoCharts/>
       </CardContent>
     </Card>
        </Grid>
-       <Grid item xs={12} sm={3.5} >
-       <Card sx={{maxWidth:'100%',height:'100%',"@media (max-width:600px)": {width:'60%',height:'40vh'}}}>
+       <Grid item xs={5.5} sm={3.5} >
+       <Card sx={{maxWidth:'100%',height:'100%',"@media (max-width:600px)": {width:'100%',height:'40vh'}}}>
       <CardContent>
        <Typography variant='h6' color='#23395d' fontWeight='bold'>Volume vs Service Level</Typography>
        <Column/>

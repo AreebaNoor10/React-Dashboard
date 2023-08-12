@@ -17,7 +17,7 @@ export default function Column() {
     <BarChart
       width={500}
       height={300}
-      sx={{mb:10, mr:18}}
+      sx={{mb:10, mr:18,"@media (max-width:600px)": {mr:25}}}
       series={[
         { data: pData, label: 'pv', id: 'pvId', stack: 'total' },
         { data: uData, label: 'uv', id: 'uvId', stack: 'total' },

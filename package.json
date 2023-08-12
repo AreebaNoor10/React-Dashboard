@@ -1,6 +1,5 @@
 {
-  "homepage": "http://AreebaNoor10.github.io/React-Dashboard",
-  "name": "sidebar",
+ "name": "sidebar",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -11,7 +11,8 @@ const chartSetting = {
     },
     mb:15,
     mr:30,
-    "@media (max-width:600px)": {mr:35,width:'580px'}
+    "@media (max-width:600px)": {mr:40},
+    "@media (max-width:400px)": {mr:41}
   },
 };
 const dataset = [

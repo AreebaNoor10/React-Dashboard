@@ -10,7 +10,8 @@ const chartSetting = {
       transform: 'rotate(-90deg) translate(0px, -20px)',
     },
     mb:20,
-    mr:40
+    mr:40,
+    "@media (max-width:400px)": {mr:45}
   },
 };
 const dataset = [

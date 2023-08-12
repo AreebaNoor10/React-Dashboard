@@ -20,8 +20,8 @@ export default function LineChart1() {
       height={300}
       sx={{
        mb:10,
-       mr:15,
-       "@media (max-width:600px)": {width:'200px', mr:20}
+       mr:10,
+       "@media (max-width:600px)": {mr:25,mb:15},
       }}
       series={[
         { data: pData },

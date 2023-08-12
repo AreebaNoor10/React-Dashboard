@@ -1,5 +1,6 @@
 body,html{
   overflow-x: hidden;
+  background: black;
 }
 .paddingall{
   padding: 10px 10px 10px 10px;
@@ -23,6 +24,7 @@ padding-left: 20px;
   background: linear-gradient(150deg,rgba(53,138,148,1)0%,rgba(91,100,96,1)100%);
 }
 .bgcolor{
+  width: 100%;
   min-height: 100vh;
   background: #eceff1;
   background: linear-gradient(150deg,rgb(224,224,224)0%,rgb(233,237,254)100%);
@@ -35,7 +37,11 @@ padding-left: 20px;
   width: 100%;
   color: #898ca2;
 }
-
+@media screen and (max-width:400px){
+  .custom-table {
+    width: 50%;
+  }
+}
 .custom-table th,
 .custom-table td {
   padding: 8px;
