@@ -20,7 +20,6 @@ import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
 import ExitToAppOutlinedIcon from '@mui/icons-material/ExitToAppOutlined';
 import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
-import { useNavigate } from 'react-router-dom';
 import { useAppstore } from '../Appstore';
 
 const drawerWidth = 240;
@@ -75,7 +74,6 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 export default function Sidebar() {
   const theme = useTheme();
   // const [open, setOpen] = React.useState(true);
-  const navigate = useNavigate();
   const open = useAppstore((state)=>state.dopen);
   return (
     <Box sx={{ display: 'flex' }}>
@@ -89,7 +87,7 @@ export default function Sidebar() {
         </DrawerHeader>
         <Divider />
         <List>
-        <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate('/')}}>
+        <ListItem  disablePadding sx={{ display: 'block' }}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
