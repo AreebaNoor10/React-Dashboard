@@ -1,0 +1,81 @@
+body,html{
+  overflow-x: hidden;
+}
+.paddingall{
+  padding: 10px 10px 10px 10px;
+}
+.pricetitle{
+  font-weight: 600;
+}
+.pricesubtitle{
+  font-size: 14px;
+}
+.iconstyle{
+ padding-top: 20px ;
+padding-left: 20px;
+}
+.gradient{
+  background: rgb(40,34,70);
+  background: linear-gradient(150deg,rgba(40,34,70,1) 0%,rgba(30,47,141,1) 100%);
+}
+.gradientlight{
+  background: rgb(53,138,148);
+  background: linear-gradient(150deg,rgba(53,138,148,1)0%,rgba(91,100,96,1)100%);
+}
+.bgcolor{
+  min-height: 100vh;
+  background: #eceff1;
+  background: linear-gradient(150deg,rgb(224,224,224)0%,rgb(233,237,254)100%);
+}
+.chart{
+  margin-top:30px;
+}
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #898ca2;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.custom-table th {
+ font-weight: 100;
+ color: #ccc;
+}
+.signal{
+  height: 35px;
+  width: 35px;
+  background-color: #fa5a7d;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+.signal1{
+  height: 35px;
+  width: 35px;
+  background-color: #fe947a;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+.signal2{
+  height: 35px;
+  width: 35px;
+  background-color: #3cd757;
+  border-radius: 50%;
+  display: inline-block;
+
+}
+.signal3{
+  height: 35px;
+  width: 35px;
+  background-color: #bf83ff;
+  border-radius: 50%;
+  display: inline-block;
+
+}
